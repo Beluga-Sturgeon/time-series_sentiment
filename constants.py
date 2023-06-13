@@ -15,3 +15,4 @@ BALANCE_SHEET_INDEX = 1
 CASH_FLOW_INDEX = 2
 
 FMP_URL = "https://financialmodelingprep.com/api/v3"
+STOCK_NEWS = "/stock_news"

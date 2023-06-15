@@ -16,3 +16,4 @@ CASH_FLOW_INDEX = 2
 
 FMP_URL = "https://financialmodelingprep.com/api/v3"
 STOCK_NEWS = "/stock_news"
+DATA_PATH = "data.csv"

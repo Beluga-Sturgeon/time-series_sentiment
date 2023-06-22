@@ -14,6 +14,7 @@ INCOME_STATEMENT_INDEX = 0
 BALANCE_SHEET_INDEX = 1
 CASH_FLOW_INDEX = 2
 
-FMP_URL = "https://financialmodelingprep.com/api/v3"
+FMP_URL = "https://financialmodelingprep.com/api/v4"
 STOCK_NEWS = "/stock_news"
+STOCK_NEWS_WITH_SENTIMENT = "/stock-news-sentiments-rss-feed?page=0"
 DATA_PATH = "data.csv"

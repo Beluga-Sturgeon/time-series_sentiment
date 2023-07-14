@@ -8,6 +8,7 @@ import re
 import requests
 import matplotlib.pyplot as plt
 import pprint
+import datetime
 try:
     # For Python 3.0 and later
     from urllib.request import urlopen
@@ -18,6 +19,10 @@ except ImportError:
 import certifi
 import json
 
+
+
+print("WE OUT")
+
 def get_jsonparsed_data(url):
 
     response = urlopen(url, cafile=certifi.where())
@@ -26,11 +31,11 @@ def get_jsonparsed_data(url):
 
 alltickers = (f"{constants.FMP_SYMBOLS_URL}?apikey={secrets.FMP_API_KEY}")
 tickers = get_jsonparsed_data(alltickers)
-pprint.pprint(tickers[0])
+# pprint.pprint(tickers[0])
 rowOfTickers = {}
 for ticker in tickers:
     rowOfTickers[ticker["symbol"]] = np.nan
-pprint.pprint(rowOfTickers)
+# pprint.pprint(rowOfTickers)
 
 def daily():
     current_df = pd.read_csv("alldata.csv")
@@ -68,5 +73,8 @@ def daily():
     current_df.to_csv("alldata.csv")
     print(current_df.tail(10))
 
-
+current = datetime.datetime.now()
 daily()
+after = datetime.datetime.now()
+elapsed = after - current
+print(f"operation completed in {elapsed}")
